@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/navigationToggle.js" defer></script>
+    <script>
+      if (localStorage.getItem("sidebarState") === "collapsed") {
+        document.documentElement.classList.add("sidebar-collapsed");
+      }
+    </script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/attendance.css" />
+    <title>Attendance</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Attendance Cards -->
+      <div class="attendance-container">
+        <h1>Attendance</h1>
+
+        <!-- QRCODE Scanner -->
+        <section class="qrcard">
+          <h2>Scan QR</h2>
+          <div class="camera-box">
+            <span>Camera Placeholder</span>
+          </div>
+          <button class="scan-btn">Start Camera</button>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <!-- Name Search -->
+        <section class="qrcard">
+          <h2>Search Member</h2>
+          <input type="text" placeholder="Enter Name, Phone or Member ID" />
+          <div class="results">
+            <div class="member-card">
+              <div class="member-info">
+                <h3>Chuka Nwachukwu</h3>
+                <p>Excel PCF</p>
+              </div>
+              <button class="present-btn">Mark Present</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

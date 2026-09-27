@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/navigationToggle.js" defer></script>
+    <script>
+      if (localStorage.getItem("sidebarState") === "collapsed") {
+        document.documentElement.classList.add("sidebar-collapsed");
+      }
+    </script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/members.css" />
+    <title>Member Profile</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="profile-container">
+        <a href="members.html" class="back-link">← Back to Members</a>
+
+        <section class="profile-card">
+          <img
+            src="images/chuka.jpeg"
+            alt="Member Photo"
+            class="profile-photo"
+          />
+
+          <h2>Chuka Nwachukwu</h2>
+          <span class="profile-status active">Active Member</span>
+          <div class="member-info">
+            <div><strong>Member ID</strong><span>0000001</span></div>
+            <div><strong>Phone</strong><span>07065941545</span></div>
+            <div><strong>Cell</strong><span>Dominion</span></div>
+            <div><strong>PCF</strong><span>Excel</span></div>
+            <div><strong>Department</strong><span>Protocol</span></div>
+          </div>
+
+          <section class="attendance-history">
+            <h3>Attendance History</h3>
+            <table class="profile-table">
+              <tr>
+                <th>Service</th>
+                <th>Attendance</th>
+              </tr>
+              <tr>
+                <td>Sunday Service</td>
+                <td>96%</td>
+              </tr>
+              <tr>
+                <td>Cell Meetings</td>
+                <td>70%</td>
+              </tr>
+              <tr>
+                <td>Prayer Meeting</td>
+                <td>50%</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="recent-attendance">
+            <h3>Recent Attendance</h3>
+            <ul>
+              <li>Sunday Service - 13 Jul 2026</li>
+              <li>Friday Zonal Prayer Meeting - 11 Jul 2026</li>
+              <li>Wednesday Service - 10 Jul 2026</li>
+              <li>Monday Prayer Meeting - 8 Jul 2026</li>
+              <li>Cell Meeting - 3 Jul 2026</li>
+            </ul>
+          </section>
+
+          <button class="edit-btn">Edit Member</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+.attendance-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.attendance-container h1 {
+    margin-bottom: 25px;
+}
+
+.qrcard {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.qrcard h2 {
+    margin-bottom: 15px;
+}
+
+.camera-box {
+    height: 280px;
+    border: 3px dashed rgb(178, 178, 178);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.scan-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(121, 2, 154);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.scan-btn:hover {
+    background: rgb(93, 2, 118);
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    font-weight: bold;
+    color: #777;
+}
+
+input {
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(121, 2, 154);
+    /* box-shadow:0 0 5px rgba(0,102,204,.3); */
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.member-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 8px;
+    transition: 3s;
+}
+
+.member-card:hover {
+    background: #f8fbff;
+}
+
+.member-info h3 {
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.member-info p {
+    color:#777;
+}
+
+.present-btn {
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.present-btn:hover {
+    background:#218838;
+}

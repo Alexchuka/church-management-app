@@ -1,0 +1,44 @@
+/* The Cells Card */
+.cell-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cell-cards {
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 8px;
+    background: white;
+    padding: 25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.cell-stats p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(121, 2, 154);
+}
+
+.view-cell-card-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 90vh;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 8px;
+    background: white;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background:#0b63ce;
+    color:#fff;
+}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departments</title>
+    <script src="JS/navigationToggle.js" defer></script>
+    <script>
+      if (localStorage.getItem("sidebarState") === "collapsed") {
+        document.documentElement.classList.add("sidebar-collapsed");
+      }
+    </script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/members.css" />
+    <link rel="stylesheet" href="CSS/department.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- The Page Header, search bar and the add Departments -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Departments</h1>
+          <button class="add-btn">+ Add Department</button>
+        </header>
+
+         <!-- The Add Department Popup Form -->
+        <!-- Registration Card that will be used for the pop up Modal -->
+        <section class="modal">
+          <!-- Modal headers -->
+          <div class="modal-header">
+            <h2>Add Department</h2>
+          </div>
+
+          <!-- Department registration Form -->
+          <form class="member-form">
+            <div class="form-group">
+              <label for="cell-name">Department Name</label>
+              <input type="text" id="cell-name" name="cell-name" />
+            </div>
+            <div class="form-group">
+              <label id="leader">Department Head</label>
+              <select>
+                <option>-- Select Leader --</option>
+                <option>Chuka Nwachukwu</option>
+                <option>Deacon Tony</option>
+                <option>Deconess Edirin</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="leader">Department Assistant</label>
+              <select>
+                <option>-- Select Assistant --</option>
+                <option>Ngozi Okereke</option>
+                <option>Ifeanyi Ezurike</option>
+                <option>Franklin Edet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="meeting">Meeting Day</label>
+              <select>
+                <option>-- Select Meeting Day --</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="meeting-time">Meeting Time</label>
+              <input type="time" id="meeting-time" name="meeting-time" />
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="status" />
+                  Active
+                </label>
+                <label>
+                  <input type="radio" name="status" />
+                  Inactive
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="photo">Photo</label>
+              <input type="file" id="photo" accept="image/*" />
+            </div>
+            <div class="form-action">
+              <button class="cancel">Cancel</button>
+              <button type="submit">Create Department</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Department Cards -->
+        <section class="department-stats">
+          <div class="department-card">
+            <h3>Departments</h3>
+            <p>12</p>
+          </div>
+          <div class="department-card">
+            <h3>Active Workers</h3>
+            <p>89</p>
+          </div>
+          <div class="department-card">
+            <h3>Department Heads</h3>
+            <p>12</p>
+          </div>
+        </section>
+
+        <!-- Department Table -->
+        <section class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Head</th>
+                <th>Assistant</th>
+                <th>Members</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Choir</td>
+                <td>James A</td>
+                <td>Tosin</td>
+                <td>21</td>
+                <td>Active</td>
+                <td>
+                  <div class="actions">
+                    <button>View</button>
+                    <a href="#">
+                      <img src="svg/edit.svg" class="icons" />
+                    </a>
+                    <a href="#">
+                      <img src="logo/delete.png" class="icons" />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Ushering</td>
+                <td>Omo Omoka</td>
+                <td>Onyinye</td>
+                <td>25</td>
+                <td>Active</td>
+                <td>
+                  <div class="actions">
+                    <button>View</button>
+                    <a href="#">
+                      <img src="svg/edit.svg" class="icons" />
+                    </a>
+                    <a href="#">
+                      <img src="logo/delete.png" class="icons" />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="pagination">
+          <span>Showing 1-50 of 80 Cells</span>
+          <div>
+            <button>Previous</button>
+            <button class="current">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

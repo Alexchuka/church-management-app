@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/navigationToggle.js" defer></script>
+    <script>
+      if (localStorage.getItem("sidebarState") === "collapsed") {
+        document.documentElement.classList.add("sidebar-collapsed");
+      }
+    </script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/members.css" />
+    <link rel="stylesheet" href="CSS/cells.css" />
+    <title>Cells</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Page Header and Add Visitor button -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Pastoral Care Fellowship (PCF)</h1>
+          <button class="add-btn">+ Add PCF</button>
+        </header>
+
+        <!-- The Add Cells Popup Form -->
+        <!-- Registration Card that will be used for the pop up Modal -->
+        <div class="modal">
+          <!-- Modal headers -->
+          <div class="modal-header">
+            <h2>Add PCF</h2>
+          </div>
+
+          <!-- Member registration Form -->
+          <form class="member-form">
+            <div class="form-group">
+              <label for="cell-name">PCF Name</label>
+              <input type="text" id="cell-name" name="cell-name" />
+            </div>
+            <div class="form-group">
+              <label id="leader">PCF Leader</label>
+              <select>
+                <option>-- Select PCF Leader --</option>
+                <option>Chuka Nwachukwu</option>
+                <option>Deacon Tony</option>
+                <option>Deconess Edirin</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="leader">PCF Assistant</label>
+              <select>
+                <option>-- Select Assistant --</option>
+                <option>Ngozi Okereke</option>
+                <option>Ifeanyi Ezurike</option>
+                <option>Franklin Edet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="meeting">Meeting Day</label>
+              <select>
+                <option>-- Select Meeting Day --</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="address">Location</label>
+              <textarea id="address" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="meeting-time">Meeting Time</label>
+              <input type="time" id="meeting-time" name="meeting-time" />
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="status" />
+                  Active
+                </label>
+                <label>
+                  <input type="radio" name="status" />
+                  Inactive
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="photo">Photo</label>
+              <input type="file" id="photo" accept="image/*" />
+            </div>
+            <div class="form-action">
+              <button class="cancel">Cancel</button>
+              <button type="submit">Create Cell</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- The Cell Info Card. -->
+        <section class="cell-stats">
+          <div class="cell-cards">
+            <h3>Total PCFs</h3>
+            <p>15</p>
+          </div>
+          <div class="cell-cards">
+            <h3>Total Members</h3>
+            <p>6,345</p>
+          </div>
+          <div class="cell-cards">
+            <h3>Active PCF Leaders</h3>
+            <p>15</p>
+          </div>
+          <div class="cell-cards">
+            <h3>Top PCF This Week</h3>
+            <p>The Haven</p>
+          </div>
+        </section>
+
+        <!-- The Cell Search column -->
+        <section class="toolbar">
+          <input
+            type="text"
+            placeholder="Enter the name of the PCF or Leader"
+          />
+          <select>
+            <option>All PCF Leaders</option>
+          </select>
+          <select>
+            <option>All Days</option>
+          </select>
+        </section>
+
+        <!-- Cell Table -->
+        <section class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>PCF Name</th>
+                <th>Leader</th>
+                <th>Assistant</th>
+                <th>Members</th>
+                <th>Meeting Day</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Excel</td>
+                <td>Chuka Nwachukwu</td>
+                <td>Joseph Kola</td>
+                <td>300</td>
+                <td>25th June 2026</td>
+                <td>
+                  <div class="actions">
+                    <button>View</button>
+                    <a href="#">
+                      <img src="svg/edit.svg" class="icons" />
+                    </a>
+                    <a href="#">
+                      <img src="logo/delete.png" class="icons" />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Dominion</td>
+                <td>Esther Ezinne</td>
+                <td>Victoria Bassey</td>
+                <td>149</td>
+                <td>21th June 2026</td>
+                <td>
+                  <div class="actions">
+                    <button>View</button>
+                    <a href="#">
+                      <img src="svg/edit.svg" class="icons" />
+                    </a>
+                    <a href="#">
+                      <img src="logo/delete.png" class="icons" />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="pagination">
+          <span>Showing 1-50 of 80 Cells</span>
+          <div>
+            <button>Previous</button>
+            <button class="current">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+          </div>
+        </section>
+
+        <!-- The View Cell Pop out Modal -->
+        <!-- <div class="view-cell-card-modal">
+          <article class="view-cell-modal">
+            <header class="modal-header">
+              <h2>Dominion Cell</h2>
+              <button class="view-cell-btn">&times;</button>
+            </header>
+
+            <section class="modal-body">
+              <div class="info-row">
+                <span class="label">Cell Leader</span>
+                <span class="value">Chuka Nwachukwu</span>
+              </div>
+              <div class="info-row">
+                <span class="label">Assistant</span>
+                <span class="value">David Ibiwari</span>
+              </div>
+              <div class="info-row">
+                <span class="label">Meeting Day</span>
+                <span class="value">Saturday</span>
+              </div>
+              <div class="info-row">
+                <span class="label">Meeting Time</span>
+                <span class="value">04:00 PM</span>
+              </div>
+              <hr />
+            </section>
+
+            <section class="view-cell-stats">
+              <div class="view-stats">
+                <h3>32</h3>
+                <p>Members</p>
+              </div>
+              <div class="view-stats">
+                <h3>28</h3>
+                <p>Average Attendance</p>
+              </div>
+              <div class="view-stats">
+                <h3>3</h3>
+                <p>New This Month</p>
+              </div>
+            </section>
+
+            <footer class="modal-footer">
+                <button class="close-modal">Close</button>
+            </footer>
+          </article>
+        </div> -->
+      </main>
+    </div>
+  </body>
+</html>

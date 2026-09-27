@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/members.css" />
+    <script src="JS/navigationToggle.js" defer></script>
+    <title>Visitors</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Page Header and Add Visitor button -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Visitors</h1>
+          <button class="add-btn">+ Add Visitor</button>
+        </header>
+
+        <!-- Registration Card that will be used for the pop up Modal -->
+        <div class="modal">
+          <div class="modal-header">
+            <h2>Register Visitor</h2>
+          </div>
+
+          <!-- Visitor registration Form -->
+          <form class="member-form">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" />
+            </div>
+            <div class="form-group">
+              <label for="middle-name">Middle Name</label>
+              <input type="text" id="middle-name" name="middle-name" />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="number" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" />
+                  Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" />
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="invited-by">Invited By</label>
+              <input type="text" id="invited-by" name="invited-by" placeholder="Please Enter Full Name"/>
+            </div>
+            <div class="form-group">
+              <label for="address">Home Address</label>
+              <textarea id="address" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label id="interested">Interested in Joining?</label>
+              <select>
+                <option>-- Select One --</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="service">Service Attended</label>
+              <select>
+                <option>-- Choose Service --</option>
+                <option>Sunday Service</option>
+                <option>Wednesday Service</option>
+                <option>Communion Service</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="service">Follow-up Status</label>
+              <select>
+                <option>-- Select Status --</option>
+                <option>Pending</option>
+                <option>No response</option>
+                <option>Interested</option>
+                <option>Not Interested</option>
+                <option>Joined a Cell</option>
+                <option>Attended Again</option>
+                <option>Visiting</option>
+              </select>
+            </div>
+            <div class="form-action">
+                <button class="cancel">Cancel</button>
+               <button type=submit">Save Invitee</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- The Search Bar and Drop down filter button -->
+         <div class="toolbar">
+            <input type="text" placeholder="Search By Name or ID">
+         </div>
+
+         <!-- The Table that displays the list of Visitors -->
+          <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Date Joined</th>
+                        <th>Invited By</th>
+                        <th>Home Address</th>
+                        <th>Interested In Joining</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001001</td>
+                        <td>Alexis</td>
+                        <td>Saelemaekers</td>
+                        <td>+3324563420</td>
+                        <td>25th July 2026</td>
+                        <td>Chuka Nwachukwu</td>
+                        <td>No 4, Bakers Street, London, UK</td>
+                        <td>Yes</td>
+                        <td><button>Convert to Member</button></td>
+                    </tr>
+                    <tr>
+                        <td>001002</td>
+                        <td>Silvano</td>
+                        <td>Vos</td>
+                        <td>+2470938222</td>
+                        <td>24th July 2026</td>
+                        <td>Christian Ohi</td>
+                        <td>No 3, Orangee, Amasterdam, Netherlands</td>
+                        <td>No</td>
+                        <td><button>Convert to Member</button></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+          <span>Showing 1-50 of 200 Visitors</span>
+          <div>
+            <button>Previous</button>
+            <button class="current">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/navigationToggle.js" defer></script>
+    <script>
+      if (localStorage.getItem("sidebarState") === "collapsed") {
+        document.documentElement.classList.add("sidebar-collapsed");
+      }
+    </script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/members.css" />
+    <title>Members</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <!-- Page Header and Add Member button -->
+        <header class="page-header">
+          <h1>Members</h1>
+          <button class="add-btn">+ Add Member</button>
+        </header>
+
+        <!-- ======= Member's Tab ================ -->
+         <div class="members-tab">
+          <button type="button" class="members-tab active">
+            All Members
+            <span class="tab-count">0</span>
+          </button>
+          <button type="button" class="members-tab">
+            Active
+            <span class="tab-count">0</span>
+          </button>
+          <button type="button" class="members-tab">
+            Inactive
+            <span class="tab-count">0</span>
+          </button>
+          <button type="button" class="members-tab">
+            Recently Added
+            <span class="tab-count">0</span>
+          </button>
+         </div>
+
+
+        <!-- The Search Bar and Drop down filter button -->
+        <div class="toolbar">
+          <input type="text" placeholder="Search by Name, cell or ID" />
+          <select>
+            <option>All Cells</option>
+          </select>
+          <select>
+            <option>All PCFs</option>
+          </select>
+          <select>
+            <option>All Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+
+        <!-- The Table that displays the list of Members, I'd like to integrate a Add and remove column feature later -->
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Cell</th>
+                <th>PCF</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>ID</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Chuka</td>
+                <td>Nwachukwu</td>
+                <td>07065941545</td>
+                <td>Dominion</td>
+                <td>Excel</td>
+                <td>PCF Leader</td>
+                <td>Protocol</td>
+                <td>No 5 Jimoh, Gbagada, Lagos</td>
+                <td><span class="status active-c">Active</span></td>
+                <td>000123</td>
+                <td>
+                  <button>View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Patrick</td>
+                <td>Ebri</td>
+                <td>08095747392</td>
+                <td>Seed of Abraham</td>
+                <td>City of Grace</td>
+                <td>Cell Leader</td>
+                <td>None</td>
+                <td>No 5 Og, Ikorodu, Lagos</td>
+                <td><span class="status inactive">Inactive</span></td>
+                <td>000593</td>
+                <td>
+                  <button>View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Bryan</td>
+                <td>Nwachukwu</td>
+                <td>07000000000</td>
+                <td>Dominion</td>
+                <td>Excel</td>
+                <td>Member</td>
+                <td>Children's Church</td>
+                <td>No 5 Jimoh, Gbagada, Lagos</td>
+                <td><span class="status active-c">Active</span></td>
+                <td>000198</td>
+                <td>
+                  <button>View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <span>Showing 1-50 of 256 Members</span>
+          <div>
+            <button>Previous</button>
+            <button class="current">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+          </div>
+        </div>
+
+        <!-- ====================================================
+         Registration Card that will be used for the pop up Modal 
+         ========================================================
+         -->
+        <div class="modal-overlay" id="memberModal">
+          <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <!-- Modal headers -->
+          <div class="modal-header">
+            <h2>Add New Member</h2>
+            <button type="button" class="modal-close" id="closeMemberModal" aria-label="close">&times</button>
+          </div>
+
+          <!-- Member registration Form -->
+          <form class="member-form">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" />
+            </div>
+            <div class="form-group">
+              <label for="middle-name">Middle Name</label>
+              <input type="text" id="middle-name" name="middle-name" />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" />
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" />
+                  Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" />
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="birthday">Birthday</label>
+              <input type="date" id="birthday" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="occupation">Occupation</label>
+              <input type="text" id="occupation" />
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea id="address" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cell">Cell</label>
+              <select id="cell">
+                <option>Select Cell</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pcf">PCF</label>
+              <select id="pcf">
+                <option>Select PCF</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select id="department">
+                <option>Select Department</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="marital">Marital Status</label>
+              <select id="marital">
+                <option>Select Status</option>
+                <option>Single</option>
+                <option>Married</option>
+                <option>Divorced</option>
+                <option>Widowed</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="photo">Photo</label>
+              <input type="file" id="photo" accept="image/*" />
+            </div>
+            <div class="form-action">
+              <button class="cancel">Cancel</button>
+              <button type="submit">Save Member</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

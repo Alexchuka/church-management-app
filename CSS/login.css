@@ -1,0 +1,144 @@
+body {
+    font-family: system-ui;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    /* background-image: url(../images/church.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header img {
+    margin-top: -90px;
+    margin-bottom: 40px;
+}
+
+header h3 {
+    color: var(--text-color);
+}
+
+.login-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--muted);
+    border-radius: 12px;
+    min-width: 450px;
+    padding: 45px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--muted);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+    /* transition: 2s; */
+    /* box-shadow: 0 0 6px rgba(121, 2, 154, 0.5); */
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.cut-size {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#login-button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: var(--color);
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+}
+
+#login-button:hover {
+    background: var(--button-hover);
+}
+
+/* Extra CSS from Javascript code */
+
+/* Success message design after JS Validator */
+.success-message {
+    color: var(--secondary);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 0.5em;
+}
+
+.success-message:empty {
+    display: none;
+}
+
+/* Password show and hide icon click */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 3em;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+
+.password-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    mask-image: url("../svg/view.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+/* Do not use the browser's default show/hide styling */
+#password {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Remove Edge's default password reveal button */
+#password::-ms-reveal {
+    display: none;
+}
+

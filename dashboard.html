@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="JS/dashboard.js" defer></script>
+    <script src="JS/navigationToggle.js" defer></script>
+    <script src="JS/theme.js" defer></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aside content for the sidebar -->
+      <aside class="sidebar">
+        <!-- Navigation Button -->
+        <button
+          type="button"
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Collapse Sidebar"
+        >
+          <span class="nav-icon icon-toggle"></span>
+        </button>
+
+        <!-- The Logo and Church name -->
+        <div class="logo">
+          <img src="logo/loveworld.png" alt="The Holy Book" />
+          <p>Loveworld Peaceville</p>
+        </div>
+
+        <!-- The Navigation at the right side of the website -->
+        <nav>
+          <a href="dashboard.html" class="active">
+            <span class="nav-icon icon-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+          <a href="members.html">
+            <span class="nav-icon icon-members"></span>
+            <span>Members</span>
+          </a>
+          <a href="attendance.html">
+            <span class="nav-icon icon-attendance"></span>
+            <span>Attendance</span>
+          </a>
+          <a href="visitors.html">
+            <span class="nav-icon icon-visitors"></span>
+            <span>Visitors</span>
+          </a>
+          <a href="cells.html">
+            <span class="nav-icon icon-cells"></span>
+            <span>Cells</span>
+          </a>
+          <a href="pcfs.html">
+            <span class="nav-icon icon-pcfs"></span>
+            <span>PCFs</span>
+          </a>
+          <a href="departments.html">
+            <span class="nav-icon icon-departments"></span>
+            <span>Departments</span>
+          </a>
+          <a href="reports.html">
+            <span class="nav-icon icon-reports"></span>
+            <span>Reports</span>
+          </a>
+          <a href="settings.html">
+            <span class="nav-icon icon-settings"></span>
+            <span>Settings</span>
+          </a>
+          <a href="login.html">
+            <span class="nav-icon icon-logout"></span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="header">
+          <h1>Dashboard</h1>
+          <div class="theme">
+            <button type="button" id="toggleTheme" aria-label="Change Theme">
+              <span class="light-dark"></span>
+              <span class="theme-text">Dark</span>
+            </button>
+          </div>
+          <!-- <button>
+            <span class="icon-userprofile"></span>
+          </button> -->
+        </header>
+
+        <section class="stats">
+          <div class="card">
+            <h3>Total Members</h3>
+            <p class="member-count"></p>
+          </div>
+          <div class="card">
+            <h3>Visitors</h3>
+            <p class="visitor-count"></p>
+          </div>
+          <div class="card">
+            <h3>New Members</h3>
+            <p class="new-members-count"></p>
+          </div>
+          <div class="card">
+            <h3>Attendance</h3>
+            <p class="attendance-percentage"></p>
+          </div>
+        </section>
+
+        <section class="dashboard-grid">
+          <div class="card chart">
+            <div class="chart-header">
+              <h2>Attendance Trend</h2>
+              <div class="chart-filters">
+                <button type="button" data-period="7">7 Days</button>
+                <button type="button" data-period="4">4 Weeks</button>
+                <button type="button" data-period="6">6 Months</button>
+              </div>
+            </div>
+            <div class="chart-container">
+              <div class="bar-chart"></div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Recent Activities</h2>
+            <ul>
+              <li>John Checked in</li>
+              <li>Mary Registered</li>
+              <li>Visitor Added</li>
+              <li>Chior Attendance Updated</li>
+            </ul>
+          </div>
+          <div class="card services">
+            <h2>Service Updates</h2>
+            <ul>
+              <li>8:00 AM - Morning Worship</li>
+              <li>9:00 AM - Pastor's Message</li>
+              <li>11:00 AM - Cell Meetings</li>
+              <li>3:00 PM - Communion Service</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="action-grid">
+            <a href="members.html" class="action-card">
+              <span class="action-icon icon-members"></span>
+              <h3>Register Member</h3>
+              <p>Add a new Member</p>
+            </a>
+            <a href="attendance.html" class="action-card">
+              <span></span>
+              <h3>Record Attendance</h3>
+              <p>Members Check in</p>
+            </a>
+            <a href="visitors.html" class="action-card">
+              <span></span>
+              <h3>Add Visitor</h3>
+              <p>Register a Visitor</p>
+            </a>
+            <a href="cells.html" class="action-card">
+              <span></span>
+              <h3>Manage Cells</h3>
+              <p>View Cell Information</p>
+            </a>
+            <a href="reports.html" class="action-card">
+              <span></span>
+              <h3>View Reports</h3>
+              <p>Analyse Attendance</p>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

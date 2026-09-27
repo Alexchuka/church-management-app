@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/login.css" />
+    <script src="JS/login.js" defer></script>
+    <script src="JS/theme.js" defer></script>
+    <title>Sign in</title>
+  </head>
+  <body>
+    <div class="theme">
+      <button type="button" id="toggleTheme" aria-label="Change Theme">
+        <span class="light-dark"></span> 
+        <span class="theme-text">Dark</span>
+      </button>
+    </div>
+    <div>
+      <header>
+        <img
+          src="logo/loveworld.png"
+          alt="The Holy Book"
+          height="90px"
+          width="120px"
+        />
+        <h3>Sign in to Loveworld Peaceville</h3>
+      </header>
+      <main class="login-card">
+        <section>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-wrapper">
+                <input type="password" id="password" name="password" required />
+                <button
+                  type="button"
+                  id="togglePassword"
+                  aria-label="Show Password"
+                >
+                  <span class="password-icon"></span>
+                </button>
+              </div>
+            </div>
+
+            <p class="success-message"></p>
+
+            <button type="submit" id="login-button">Login</button>
+
+            <p class="cut-size">
+              Forgot Password? <a href="#">Click here to reset</a>
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
